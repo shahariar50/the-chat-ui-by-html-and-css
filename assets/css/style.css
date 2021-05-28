@@ -1,5 +1,7 @@
+/* Importing Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,400&display=swap");
 
+/* Reset Default Css */
 * {
   margin: 0;
 }
@@ -105,6 +107,7 @@ body {
   padding-left: 30px;
 }
 
+/* Header Section */
 header {
   position: fixed;
   min-height: 100px;
@@ -164,6 +167,7 @@ header .header-content .header-content-inner ul li .icon svg {
   width: calc(100% - 100px);
 }
 
+/* Sidebar */
 aside {
   position: fixed;
   left: 0;
@@ -175,7 +179,6 @@ aside {
   display: flex;
   align-items: flex-end;
 }
-
 aside ul {
   padding: 0;
   width: 100%;
@@ -194,17 +197,18 @@ aside ul li {
   margin-bottom: 30px;
   cursor: pointer;
 }
-
 aside ul li.active {
   background-color: #ffe6e9;
 }
 
+/* Main Layout */
 main {
   padding-top: 40px;
   display: flex;
   flex-grow: 1;
 }
 
+/* Inbox Section */
 main .inbox hr {
   width: 100%;
   margin-top: 30px;
@@ -217,7 +221,6 @@ main .inbox {
   padding-left: 40px;
   padding-right: 40px;
 }
-
 main .inbox .search-container .icon-input {
   position: relative;
   display: flex;
@@ -245,7 +248,6 @@ main .inbox .search-container .icon-input input:focus {
 main .inbox .search-container .icon-input input::placeholder {
   color: #b8b8b8;
 }
-
 main .inbox .inbox-list-container .header {
   display: flex;
   margin-bottom: 20px;
@@ -270,6 +272,8 @@ main .inbox .inbox-list-container .inbox-item {
   background-color: #fff;
   border-bottom: 2px solid #e9e9e9;
 }
+
+/* Applying border color transparent for active inbox item */
 main .inbox .inbox-list-container .inbox-item.active {
   border-color: transparent;
 }
@@ -290,6 +294,7 @@ main .inbox .inbox-list-container .inbox-list .inbox-item .avatar::after {
   right: 0;
   bottom: 0px;
 }
+/* Setting dot's background for active status */
 main
   .inbox
   .inbox-list-container
@@ -298,13 +303,14 @@ main
   .avatar.active::after {
   background-color: #00f868;
 }
+/* Setting dot's background for away status */
 main .inbox .inbox-list-container .inbox-list .inbox-item .avatar.away::after {
   background-color: #faa633;
 }
+/* Setting dot's background for busy status */
 main .inbox .inbox-list-container .inbox-list .inbox-item .avatar.busy::after {
   background-color: #fe484e;
 }
-
 main .inbox .inbox-list-container .inbox-list .inbox-item .media-body h5 {
   margin-bottom: 5px;
 }
@@ -317,6 +323,7 @@ main
   h5:nth-child(2) {
   font-weight: 400;
 }
+/* Changing the fonts color of seen message's inbox-item */
 main
   .inbox
   .inbox-list-container
@@ -329,7 +336,7 @@ main
 main .inbox .inbox-list-container .inbox-list .inbox-item .media-body .time {
   color: #afafaf;
 }
-
+/* Setting the color of active inbox item */
 main .inbox .inbox-list-container .inbox-item.active {
   background-color: #fe8992;
 }
@@ -338,6 +345,7 @@ main .inbox .inbox-list-container .inbox-item.active .time {
   color: #fff !important;
 }
 
+/* Chatbox Section */
 main .chatbox {
   background-color: #fff;
   flex-grow: 1;
@@ -385,6 +393,7 @@ main
   padding-left: 20px;
   flex-grow: 1;
 }
+/* Style for text message's item */
 main
   .chatbox
   .chatbox-body
@@ -462,6 +471,7 @@ main
   background-color: #f7f8fc;
   max-width: 700px;
 }
+/* Styles for file type messages item */
 main
   .chatbox
   .chatbox-body
@@ -495,6 +505,7 @@ main
   .text-message.file {
   margin-left: auto;
 }
+/* Styles for audio type messages item */
 main
   .chatbox
   .chatbox-body
@@ -551,6 +562,7 @@ main
   .time {
   padding-left: 10px;
 }
+/* Styles for video type messages item */
 main
   .chatbox
   .chatbox-body
@@ -592,7 +604,6 @@ main
   transform: translate(-50%, -50%);
   cursor: pointer;
 }
-
 main .chatbox .chatbox-footer {
   padding: 15px 10px;
   display: flex;
