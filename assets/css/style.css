@@ -40,15 +40,15 @@ body {
 }
 .avatar.rounded {
   border-radius: 50%;
-  overflow: hidden;
 }
 .avatar.box-shadow {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .avatar img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  border-radius: 50%;
 }
 
 /* Icon Badge Component*/
@@ -89,6 +89,15 @@ body {
 .menu svg {
   margin-right: 5px;
   margin-left: 5px;
+}
+
+/* Media Component */
+.media {
+  padding: 20px 15px;
+  display: flex;
+}
+.media .media-body {
+  padding-left: 30px;
 }
 
 header {
@@ -187,6 +196,7 @@ aside ul li.active {
 
 main {
   padding: 40px;
+  padding-bottom: 0;
 }
 
 main .inbox hr {
@@ -239,8 +249,76 @@ main .inbox .inbox-list-container .header h5 {
 main .inbox .inbox-list-container .header .menu svg {
   font-size: 14px;
 }
-
 main .inbox .inbox-list-container .inbox-list {
+  height: calc(100vh - 335px);
+  overflow-y: auto;
+}
+main .inbox .inbox-list-container .inbox-list > hr {
+  margin: 0;
+}
+main .inbox .inbox-list-container .inbox-item {
+  background-color: #fff;
+}
+main .inbox .inbox-list-container .inbox-list .inbox-item .avatar {
+  position: relative;
+}
+main .inbox .inbox-list-container .inbox-list .inbox-item .avatar::after {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  background-color: #ddd;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  right: 0;
+  bottom: 0px;
+}
+main
+  .inbox
+  .inbox-list-container
+  .inbox-list
+  .inbox-item
+  .avatar.active::after {
+  background-color: #00f868;
+}
+main .inbox .inbox-list-container .inbox-list .inbox-item .avatar.away::after {
+  background-color: #faa633;
+}
+main .inbox .inbox-list-container .inbox-list .inbox-item .avatar.busy::after {
+  background-color: #fe484e;
+}
+
+main .inbox .inbox-list-container .inbox-list .inbox-item .media-body h5 {
+  margin-bottom: 5px;
+}
+main
+  .inbox
+  .inbox-list-container
+  .inbox-list
+  .inbox-item
+  .media-body
+  h5:nth-child(2) {
+  font-weight: 400;
+}
+main
+  .inbox
+  .inbox-list-container
+  .inbox-list
+  .inbox-item.seen
+  .media-body
+  h5:nth-child(2) {
+  color: #888;
+}
+main .inbox .inbox-list-container .inbox-list .inbox-item .media-body .time {
+  color: #afafaf;
+}
+
+main .inbox .inbox-list-container .inbox-item.active {
+  background-color: #fe8992;
+}
+main .inbox .inbox-list-container .inbox-item.active h5,
+main .inbox .inbox-list-container .inbox-item.active .time {
+  color: #fff !important;
 }
 
 main .chatbox {
