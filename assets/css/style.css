@@ -51,7 +51,7 @@ body {
   object-fit: cover;
 }
 
-/* Icon Badge */
+/* Icon Badge Component*/
 .icon-badge {
   display: inline-block;
   position: relative;
@@ -74,6 +74,23 @@ body {
   top: -5px;
 }
 
+/* Menu Component */
+.menu {
+  display: inline-flex;
+  align-items: center;
+}
+.menu p {
+  display: inline-flex;
+  align-items: center;
+}
+.menu p.align-top {
+  align-items: flex-start;
+}
+.menu svg {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
 header {
   position: fixed;
   min-height: 100px;
@@ -82,7 +99,6 @@ header {
   display: flex;
   background-color: #fff;
 }
-
 header .brand-logo {
   background-color: #ff8892;
   width: 100px;
@@ -95,7 +111,6 @@ header .brand-logo {
   font-weight: 700;
   text-transform: uppercase;
 }
-
 header .header-content {
   flex-grow: 1;
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.25);
@@ -103,9 +118,6 @@ header .header-content {
   justify-content: flex-end;
   align-items: stretch;
   padding-right: 30px;
-}
-
-header .header-content .header-content-inner {
 }
 header .header-content .header-content-inner ul {
   padding: 0;
@@ -119,24 +131,11 @@ header .header-content .header-content-inner ul li {
   margin-left: 10px;
   cursor: pointer;
 }
-
-header .header-content .header-content-inner ul li .menu {
-  display: inline-flex;
-  align-items: center;
-}
-header .header-content .header-content-inner ul li .menu p {
-  display: inline-flex;
-  align-items: flex-start;
-}
 header .header-content .header-content-inner ul li .menu svg {
-  margin-right: 10px;
-  margin-left: 10px;
   font-size: 11px;
 }
 header .header-content .header-content-inner ul li .menu .avatar {
   margin-right: 10px;
-}
-header .header-content .header-content-inner ul li .icon {
 }
 header .header-content .header-content-inner ul li .icon svg {
   font-size: 24px;
@@ -191,25 +190,35 @@ main {
 }
 
 main .inbox hr {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 2px solid #e9e9e9;
 }
 main .inbox {
   width: 350px;
 }
-main .inbox .search-container {
-}
+
 main .inbox .search-container .icon-input {
+  position: relative;
+  display: flex;
 }
-main .inbox .search-container .icon-input i {
+main .inbox .search-container .icon-input svg {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translate(-25%, -50%);
+  color: #697180;
 }
 main .inbox .search-container .icon-input input {
   width: 100%;
   font-size: 16px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 15px;
   font-style: italic;
   border: none;
   color: #374050;
-  padding-left: 50px;
+  padding-left: 40px;
 }
 main .inbox .search-container .icon-input input:focus {
   box-shadow: none;
@@ -218,7 +227,20 @@ main .inbox .search-container .icon-input input:focus {
 main .inbox .search-container .icon-input input::placeholder {
   color: #b8b8b8;
 }
-main .inbox {
+
+main .inbox .inbox-list-container .header {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+main .inbox .inbox-list-container .header h5 {
+  margin-bottom: 0;
+}
+main .inbox .inbox-list-container .header .menu svg {
+  font-size: 14px;
+}
+
+main .inbox .inbox-list-container .inbox-list {
 }
 
 main .chatbox {
